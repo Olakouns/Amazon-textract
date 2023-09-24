@@ -1,0 +1,32 @@
+.img-chooser{
+  border: 1px dashed whitesmoke;
+  width: 40rem;
+  border-radius: 8px;
+  height: 100px;
+  transition: .5s;
+
+  &:hover{
+    background-color: #343541;
+  }
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.w-35{
+  width: 35%;
+}
+
+.w-65 {
+  width: 65%;
+}
+
+.animateClass{
+  transition: 0.5s;
+}
+
+:host ::ng-deep .custom-spinner circle{
+  stroke: white;
+}
+

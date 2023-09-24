@@ -1,0 +1,21 @@
+.custom-code{
+  border-radius: 8px;
+  &-head{
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    color: white;
+    background-color: #343541;
+  }
+  &-content{
+    background-color:#000000;
+    border-radius: 0 0 8px 8px;
+    width: 100%;
+    overflow-y: auto;
+  }
+}
+.text-key {
+  color: #df3079;
+}
+.text-value {
+  color: #00a67d;
+}

@@ -1,0 +1,13 @@
+<div class="custom-code">
+  <div class="custom-code-head p-3">
+    <h6 class="fw-normal">Data</h6>
+  </div>
+  <div class="custom-code-content p-3">
+    <span class="text-white">{{"{"}}</span>
+    <div *ngFor="let item of refactorData | keyvalue">
+      <div class="ms-3"><span class="text-key">{{ item.key }}</span> <span class="text-white"> &nbsp;:&nbsp; </span> <span class="text-value">{{ item.value }}</span> </div>
+    </div>
+    <span class="text-white">{{"}"}}</span>
+  </div>
+</div>
+

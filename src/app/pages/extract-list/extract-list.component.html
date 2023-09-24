@@ -1,0 +1,18 @@
+<div class="container mt-5">
+
+  <div class="mb-4">
+    <a class="d-flex align-items-center text-white text-decoration-none" routerLink="/"><mat-icon class="text-white me-3">keyboard_backspace</mat-icon> Back</a>
+  </div>
+
+  <div class="row" *ngIf="!isLoading; else elseTemplate">
+    <div class="col-6 mb-4" *ngFor="let data of dataList.Items">
+      <app-extract-items [data]="data"></app-extract-items>
+    </div>
+  </div>
+
+  <ng-template #elseTemplate>
+    <div class="d-flex justify-content-center align-items-center">
+      <mat-spinner class="custom-spinner" diameter="30"></mat-spinner>
+    </div>
+  </ng-template>
+</div>

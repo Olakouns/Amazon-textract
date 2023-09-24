@@ -1,0 +1,21 @@
+<div class="d-flex h-100vh">
+  <div class="h-100 d-flex justify-content-center align-items-center animateClass" [class]="{'w-100': !result, 'w-65': result}">
+    <div>
+      <div class="img-chooser cursor-pointer d-flex justify-content-center align-items-center"
+           (click)="fileInput.click()">
+        <div class="btn-chooser">
+          <p class="mb-0 fw-bold text-white" *ngIf="!isLoading">{{ loadFileText }}</p>
+          <div *ngIf="isLoading" class="d-flex w-100 justify-content-center"><mat-spinner class="custom-spinner" diameter="30"></mat-spinner></div>
+        </div>
+        <input hidden #fileInput type="file" id="file2" [accept]="acceptType" (change)="loadFile(fileInput.files)">
+      </div>
+      <div class="mt-3 text-end"><a class="text-white-50 text-decoration-underline" routerLink="all">View the last extraction</a></div>
+    </div>
+
+  </div>
+
+  <div class="w-35 p-3" *ngIf="result">
+    <h4 class="text-white">Extraction result</h4>
+    <app-extract-items [data]="result"></app-extract-items>
+  </div>
+</div>
